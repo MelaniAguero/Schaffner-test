@@ -70,3 +70,17 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+-- Estructura de tabla para la tabla `usuarios-registrados`
+--
+CREATE TABLE `registro` (
+  `id_cliente` int(11) NOT NULL,
+  `nombre` varchar(99) NOT NULL,
+  `direccion` varchar(99) NOT NULL,
+  `num_fiscal` int(99) NOT NULL,
+`mail` varchar(99) NOT NULL,
+  `user_registro` varchar(16) NOT NULL,
+  'password' varchar(20)NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

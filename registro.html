@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registro Usuarios</title>
+</head>
+
+<body>
+      <form action="registro.php" method="post">
+            <div class="container">
+                  <h5>Ingrese los Datos solicitados para guardar su registro</h5>
+                  <br>
+                  <div class="row">
+                        <div class="col-3">
+                        </div>
+                        <div class="col-6">
+                              <h5>Datos Personales</h5>
+                              <label>Nombre o Empresa</label>
+                              <input class="form-control" type="text" placeholder="Ingrese su Nombre o de la Empresa"
+                                    name="nombre" required><br>
+                              <br><label>Ingrese N°Fiscal</label>
+                              <input class="form-control" type="text" placeholder="Ingrese El N° " name="num_fiscal"
+                                    required>
+                              <br>
+                              <label>Correo Electronico</label>
+                              <input class="form-control" type="text" placeholder="Ingrese un e-mail" name="mail"
+                                    required><br>
+                              <br><label>Direccion</label>
+                              <input class="form-control" type="text" placeholder="Ingrese Direccion Fiscal" name="mail"
+                                    required>
+
+                              <h5>Registro de Usuario</h5>
+                              <label>Nombre de Usuario</label>
+                              <input class="form-control" type="text" placeholder="Nombre de Usuario"
+                                    name="user_registro" required>
+                              <div id="passwordHelpBlock" class="form-text">
+                                    Su Usuario debe ser Alfanumerico,
+                              </div><br>
+                              <label>Password</label>
+                              <input class="form-control" type="password" placeholder="Ingrese contraseña Segura"
+                                    name="password" required>
+                              <div id="passwordHelpBlock" class="form-text">
+                                    Su contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y al
+                                    menos un caracteres
+                                    especiales sin contener espacios,
+                              </div>
+
+                              <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                              </div><br><br>
+                              <button type="submit" class="btn btn-primary">Enviar</button>
+
+                        </div>
+
+
+
+                  </div>
+
+            </div>
+
+      </form>
+
+</body>
+
+</html>

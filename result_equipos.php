@@ -9,7 +9,7 @@
 <body>
     <?php
     $servername="localhost";
-    $database="schaffner_db";
+    $database="dialeclab";
     $username="root";
     $password="";
 

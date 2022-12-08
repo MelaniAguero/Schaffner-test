@@ -75,12 +75,14 @@ CREATE TABLE `analisis` (
 -- Estructura de tabla para la tabla `cliente`
 --
 
-CREATE TABLE `cliente` (
+CREATE TABLE `registro` (
   `id_cliente` int(11) NOT NULL,
   `nombre` varchar(99) NOT NULL,
   `direccion` varchar(99) NOT NULL,
   `num_fiscal` int(99) NOT NULL,
-  `cliente_user` varchar(16) NOT NULL
+`mail` varchar(99) NOT NULL,
+  `user_registro` varchar(16) NOT NULL,
+  'password' varchar(20)NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
