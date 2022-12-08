@@ -1,0 +1,24 @@
+:root{
+      --negro:  #000000;
+      --gris:#E6E6E6;
+      --blanco: #ffffff;
+}
+.body{
+      display: flexbox;
+      background-color: var(--negro);
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      }
+
+.form{
+      width: 500px;
+      border: 2px solid var(--negro);
+      padding: 5rem;
+      background-color: var(--blanco);
+      border: none;
+      border-radius: 20px;
+      color: aqua;
+
+}

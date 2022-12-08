@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3308
--- Tiempo de generación: 06-12-2022 a las 21:51:41
+-- Tiempo de generación: 08-12-2022 a las 15:56:40
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -28,11 +28,25 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `analisis` (
-  `inf_quimico` varchar(45) NOT NULL,
-  `inf_gases` varchar(45) NOT NULL,
-  `fech_Ingreso` date NOT NULL,
-  `fech_egreso` date NOT NULL,
-  `nota_pedido` varchar(45) NOT NULL,
+  `id_equipo` int(99) NOT NULL,
+  `marca_equipo` varchar(255) NOT NULL,
+  `ano_equipo` int(99) NOT NULL,
+  `serie_equipo` varchar(255) NOT NULL,
+  `volat_equipo` varchar(255) NOT NULL,
+  `volbt_equipo` varchar(255) NOT NULL,
+  `volter_equipo` varchar(255) NOT NULL,
+  `pote1_equipo` varchar(255) NOT NULL,
+  `pote2_equipo` varchar(255) NOT NULL,
+  `pote3_equipo` varchar(255) NOT NULL,
+  `refrig_equipo` varchar(45) NOT NULL,
+  `fluido_equipo` varchar(45) NOT NULL,
+  `marcfluid_equipo` varchar(45) NOT NULL,
+  `cliente_equipo` varchar(45) NOT NULL,
+  `num_informe_quimico` int(99) NOT NULL,
+  `num_informe_gases` int(99) NOT NULL,
+  `fecha_ingreso` date NOT NULL,
+  `fecha_egreso` date NOT NULL,
+  `nota_pedido` int(50) NOT NULL,
   `num_neutralizacion` varchar(45) NOT NULL,
   `color` varchar(45) NOT NULL,
   `densidad` varchar(45) NOT NULL,
@@ -63,26 +77,9 @@ CREATE TABLE `analisis` (
   `dbds` varchar(10) NOT NULL,
   `viscosidad_40` decimal(30,0) NOT NULL,
   `viscosidad_100` decimal(30,0) NOT NULL,
-  `furanos` varchar(45) NOT NULL,
+  `furano` varchar(45) NOT NULL,
   `particulas` varchar(45) NOT NULL,
-  `humedad` decimal(45,0) NOT NULL,
   `id_analisis` int(99) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `cliente`
---
-
-CREATE TABLE `registro` (
-  `id_cliente` int(11) NOT NULL,
-  `nombre` varchar(99) NOT NULL,
-  `direccion` varchar(99) NOT NULL,
-  `num_fiscal` int(99) NOT NULL,
-`mail` varchar(99) NOT NULL,
-  `user_registro` varchar(16) NOT NULL,
-  'password' varchar(20)NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -100,19 +97,31 @@ CREATE TABLE `equipos` (
   `volbt_equipo` varchar(255) NOT NULL,
   `volter_equipo` varchar(255) NOT NULL,
   `pote1_equipo` varchar(255) NOT NULL,
-  `pote2_equipo` varchar(255) NOT NULL,
-  `refrig_equipo` varchar(45) NOT NULL,
-  `fluido_equipo` varchar(45) NOT NULL,
-  `marcfluid_equipo` varchar(45) NOT NULL,
-  `cliente_equipo` varchar(45) NOT NULL
+  `pote2_equipo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `equipos`
 --
 
-INSERT INTO `equipos` (`id_equipo`, `marca_equipo`, `ano_equipo`, `serie_equipo`, `volat_equipo`, `volbt_equipo`, `volter_equipo`, `pote1_equipo`, `pote2_equipo`, `refrig_equipo`, `fluido_equipo`, `marcfluid_equipo`, `cliente_equipo`) VALUES
-(1, 'Vasile', 2004, '19196', '44000/12000', '-', '-', '1500', '-', '', '', '', '');
+INSERT INTO `equipos` (`id_equipo`, `marca_equipo`, `ano_equipo`, `serie_equipo`, `volat_equipo`, `volbt_equipo`, `volter_equipo`, `pote1_equipo`, `pote2_equipo`) VALUES
+(1, 'Vasile', 2004, '19196', '44000/12000', '-', '-', '1500', '-');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `registro`
+--
+
+CREATE TABLE `registro` (
+  `id_cliente` int(11) NOT NULL,
+  `nombre` varchar(99) NOT NULL,
+  `direccion` varchar(99) NOT NULL,
+  `num_fiscal` int(99) NOT NULL,
+  `mail` varchar(99) NOT NULL,
+  `user_registro` varchar(16) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tablas volcadas
@@ -125,33 +134,20 @@ ALTER TABLE `analisis`
   ADD PRIMARY KEY (`id_analisis`);
 
 --
--- Indices de la tabla `cliente`
---
-ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`id_cliente`),
-  ADD KEY `user_cliente` (`cliente_user`);
-
---
 -- Indices de la tabla `equipos`
 --
 ALTER TABLE `equipos`
   ADD PRIMARY KEY (`id_equipo`);
 
 --
+-- Indices de la tabla `registro`
+--
+ALTER TABLE `registro`
+  ADD PRIMARY KEY (`id_cliente`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
--- AUTO_INCREMENT de la tabla `analisis`
---
-ALTER TABLE `analisis`
-  MODIFY `id_analisis` int(99) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `cliente`
---
-ALTER TABLE `cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158334;
 
 --
 -- AUTO_INCREMENT de la tabla `equipos`

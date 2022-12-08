@@ -1,0 +1,42 @@
+:root{
+      --primary:  #023467;
+      --secondary: #0f0e11;
+      --light: #ffffff;
+      --dark:  #000000;
+      --publish: #80808058;
+}
+#form, .form-conociste{
+      font-family: 'prata';
+      margin-top: 5%;
+      padding-bottom: 5%;
+      background-color: var(--light);
+      padding-left: 5%;
+      padding-top: 5%;
+      margin-bottom: 10%;
+      margin-right: 2%;
+}
+#titulo{
+      padding-bottom: 8%;
+      text-align: center;
+      
+}
+.btnEnviar{
+      margin-top: 12%;
+      background-color: var(--publish);
+      color: var(--primary);
+}
+a#volver{
+      padding-bottom: 13%;
+      padding: 2%;
+      color: var(--light);
+     text-decoration: none;
+      background-color: var(--primary);
+      margin-bottom: 13%;
+}
+#volver:hover{
+      font-style: italic;
+      font-size: 15px;
+      background-color: var(--publish);
+      color:var(--dark);
+}
+
